@@ -23,7 +23,7 @@ function configure(env) {
         loader: 'babel-loader',
         exclude: /.*node_modules((?!afini).)*$/,
         options: {
-          presets: ['es2015', 'stage-0'],
+          presets: ['es2015', 'stage-0', 'react'],
           plugins: ['transform-object-rest-spread']
         },
       },
