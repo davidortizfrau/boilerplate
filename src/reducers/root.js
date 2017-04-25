@@ -1,15 +1,7 @@
-let initState = {
-  foo: null
-}
+import { combineReducers } from 'redux'
 
-export default (state = initState, action) => {
-  switch (action.type) {
-    case 'COOL':
-      return {
-        ...state,
-        foo: 'bar'
-      }
-    default:
-      return state
-  }
-}
+import widgets from './widgets'
+
+export default combineReducers({
+  widgets
+})
