@@ -41,7 +41,7 @@ function configure(env) {
 
   config.plugins.push(
     new webpack.DefinePlugin({
-      ENVIRONMENT: ENVIRONMENT
+      ENVIRONMENT: env
     })
   )
 
