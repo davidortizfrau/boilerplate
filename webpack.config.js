@@ -2,7 +2,6 @@ var path = require('path')
 var webpack = require('webpack')
 
 function configure(env) {
-  const ENVIRONMENT = JSON.stringify(env)
 
   var config = {
     entry: [
@@ -52,7 +51,7 @@ function configure(env) {
     publicPath: '/'
   }
 
-  if (ENVIRONMENT == 'dev') {
+  if (env.dev) {
     config.devtool = 'eval'
     config.entry = [
       'webpack-dev-server/client',
@@ -60,7 +59,7 @@ function configure(env) {
     ].concat(config.entry)
   }
 
-  if (ENVIRONMENT == 'prod') {
+  if (env.prod) {
     config.plugins.push(
       // new CompressionPlugin({
       //   asset: "[path].gz[query]",
