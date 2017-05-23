@@ -6,8 +6,8 @@
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist && cp index.html dist/index.html",
     "postbuild": "mkdir dist/public && cp -r public dist",
-    "build": "webpack -p --env=prod",
-    "start": "webpack-dev-server --inline --hot --history-api-fallback --env=dev",
+    "build": "webpack -p --env.prod",
+    "start": "webpack-dev-server --inline --hot --history-api-fallback --env.dev",
     "s3": "aws s3 sync dist s3://test.boilerplate.david/"
   },
   "author": "David Ortiz Frau <david.ortiz.frau@gmail.com>",
